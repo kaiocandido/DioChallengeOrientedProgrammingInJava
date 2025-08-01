@@ -1,29 +1,11 @@
-public class ContaCorrente {
-    private int agencia;
-    private int numero;
-    private double saldo;
+public class ContaCorrente extends Conta{
 
-    public double getSaldo() {
-        return saldo;
+    private static int SEQUENCIAL = 0;
+
+    public ContaCorrente() {
+        super.agencia = Conta.AGENDA_PADRAO;
+        super.numero = SEQUENCIAL++;
     }
 
-    public int getNumero() {
-        return numero;
-    }
 
-    public int getAgencia() {
-        return agencia;
-    }
-
-    public void sacar(){
-
-    }
-
-    public void transferir(){
-
-    }
-
-    public void depositar(){
-
-    }
 }
