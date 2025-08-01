@@ -18,16 +18,18 @@ public abstract class Conta implements IntConta{
 
     @Override
     public void sacar(double valor) {
-
+        this.saldo = saldo - valor;
     }
 
     @Override
-    public void transferir(double valor, int numConta) {
-
+    public void transferir(double valor, Conta numConta) {
+        this.sacar(valor);
+        numConta.depositar(valor);
     }
 
     @Override
     public void depositar(double valor) {
-
+        this.saldo = saldo + valor;
     }
+
 }

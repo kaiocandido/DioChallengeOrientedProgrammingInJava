@@ -7,5 +7,14 @@ public class ContaCorrente extends Conta{
         super.numero = SEQUENCIAL++;
     }
 
+    @Override
+    public void imprimirExtrato(){
+        System.out.println("==========================================");
+        System.out.println("Extrato da conta Corrente " + super.agencia);
+        System.out.println("Extrato da conta Corrente " + super.numero);
+        System.out.println("Extrato da conta Corrente " + super.saldo);
+        System.out.println("==========================================");
+
+    }
 
 }
